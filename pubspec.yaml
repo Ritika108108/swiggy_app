@@ -79,6 +79,18 @@ flutter:
     - assets/images/scenes.jpg
     - assets/images/credit_card.jpeg
     - assets/images/banner_slot.png
+    - assets/images/food1.jpeg
+    - assets/images/food2.jpeg
+    - assets/images/food3.jpeg
+    - assets/images/food4.jpeg
+    - assets/images/food5.jpeg
+    - assets/images/food6.jpeg
+    - assets/images/food7.jpeg
+    - assets/images/food8.jpeg
+    - assets/images/food9.png
+    - assets/images/food10.png
+    - assets/images/train_meal.jpg
+    
   
 
   # An image asset can refer to one or more resolution-specific "variants", see

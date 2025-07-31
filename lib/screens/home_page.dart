@@ -1,7 +1,28 @@
 import 'package:flutter/material.dart';
+import 'food_page.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  int _selectedIndex = 0;
+
+  void _onItemTapped(int index) {
+    if (index == 1) {
+      // Navigate to FoodPage when "Food" tab is tapped
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => const FoodPage()),
+      );
+    }
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -24,8 +45,10 @@ class HomePage extends StatelessWidget {
                         children: const [
                           Text(
                             "35/12/2",
-                            style:
-                                TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16,
+                            ),
                           ),
                           Text(
                             "Tukai Nagar, Kale Padal, Hadapsar, Pune, Aut...",
@@ -83,13 +106,24 @@ class HomePage extends StatelessWidget {
                         ElevatedButton(
                           onPressed: null,
                           style: ButtonStyle(
-                            backgroundColor: MaterialStatePropertyAll(Color(0xFF007BFF)),
-                            foregroundColor: MaterialStatePropertyAll(Colors.white),
-                            padding: MaterialStatePropertyAll(
-                                EdgeInsets.symmetric(horizontal: 16, vertical: 10)),
-                            shape: MaterialStatePropertyAll(
+                            backgroundColor: WidgetStatePropertyAll(
+                              Color(0xFF007BFF),
+                            ),
+                            foregroundColor: WidgetStatePropertyAll(
+                              Colors.white,
+                            ),
+                            padding: WidgetStatePropertyAll(
+                              EdgeInsets.symmetric(
+                                horizontal: 16,
+                                vertical: 10,
+                              ),
+                            ),
+                            shape: WidgetStatePropertyAll(
                               RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.all(Radius.circular(30))),
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(30),
+                                ),
+                              ),
                             ),
                           ),
                           child: Text("SHOP ON INSTAMART"),
@@ -131,7 +165,6 @@ class HomePage extends StatelessWidget {
                       "GRAND FESTIVE SALE",
                       "FREE DEL AT ₹49",
                       "assets/images/instamart.png",
-                      
                     ),
                     _buildServiceCard(
                       "DINEOUT",
@@ -171,13 +204,19 @@ class HomePage extends StatelessWidget {
                             Text(
                               "CREDIT CARD",
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.orange,
-                                  fontSize: 16),
+                                fontWeight: FontWeight.bold,
+                                color: Colors.orange,
+                                fontSize: 16,
+                              ),
                             ),
                             SizedBox(height: 4),
-                            Text("FIRST YEAR FREE, JUST FOR YOU",
-                                style: TextStyle(fontSize: 13, color: Colors.black54)),
+                            Text(
+                              "FIRST YEAR FREE, JUST FOR YOU",
+                              style: TextStyle(
+                                fontSize: 13,
+                                color: Colors.black54,
+                              ),
+                            ),
                           ],
                         ),
                       ),
@@ -195,22 +234,38 @@ class HomePage extends StatelessWidget {
 
       // Bottom Navigation Bar
       bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _selectedIndex,
         selectedItemColor: Colors.orange,
         unselectedItemColor: Colors.grey,
         showUnselectedLabels: true,
+        onTap: _onItemTapped,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Swiggy"),
-          BottomNavigationBarItem(icon: Icon(Icons.food_bank_outlined), label: "Food"),
-          BottomNavigationBarItem(icon: Icon(Icons.shopping_bag_outlined), label: "Instamart"),
-          BottomNavigationBarItem(icon: Icon(Icons.restaurant_menu), label: "Dineout"),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.food_bank_outlined),
+            label: "Food",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.shopping_bag_outlined),
+            label: "Instamart",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.restaurant_menu),
+            label: "Dineout",
+          ),
           BottomNavigationBarItem(icon: Icon(Icons.replay), label: "Reorder"),
         ],
       ),
     );
   }
 
-  Widget _buildServiceCard(String title, String subtitle, String offer, String imagePath,
-      {String? extraText}) {
+  Widget _buildServiceCard(
+    String title,
+    String subtitle,
+    String offer,
+    String imagePath, {
+    String? extraText,
+  }) {
     return Container(
       decoration: BoxDecoration(
         color: Colors.white,
@@ -219,13 +274,22 @@ class HomePage extends StatelessWidget {
           BoxShadow(color: Colors.black12, blurRadius: 6, offset: Offset(2, 2)),
         ],
       ),
-      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 12), // added horizontal padding
+      padding: const EdgeInsets.symmetric(
+        horizontal: 8,
+        vertical: 12,
+      ), // added horizontal padding
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(title, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+          Text(
+            title,
+            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+          ),
           const SizedBox(height: 4),
-          Text(subtitle, style: const TextStyle(fontSize: 12, color: Colors.black54)),
+          Text(
+            subtitle,
+            style: const TextStyle(fontSize: 12, color: Colors.black54),
+          ),
           const SizedBox(height: 6),
           Row(
             children: [
@@ -233,27 +297,33 @@ class HomePage extends StatelessWidget {
                 offer,
                 style: TextStyle(
                   fontSize: 12,
-                  color: offer.toUpperCase() == "NEW" ? Colors.red : Colors.orange,
+                  color: offer.toUpperCase() == "NEW"
+                      ? Colors.red
+                      : Colors.orange,
                   fontWeight: FontWeight.bold,
                 ),
               ),
               if (extraText != null)
                 Container(
                   margin: const EdgeInsets.only(left: 8),
-                  padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 6,
+                    vertical: 2,
+                  ),
                   decoration: BoxDecoration(
                     color: Colors.orange[50],
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  child: Text(extraText, style: const TextStyle(fontSize: 10, color: Colors.orange)),
+                  child: Text(
+                    extraText,
+                    style: const TextStyle(fontSize: 10, color: Colors.orange),
+                  ),
                 ),
             ],
           ),
           const SizedBox(height: 8),
           Expanded(
-            child: Center(
-              child: Image.asset(imagePath, fit: BoxFit.contain),
-            ),
+            child: Center(child: Image.asset(imagePath, fit: BoxFit.contain)),
           ),
         ],
       ),
