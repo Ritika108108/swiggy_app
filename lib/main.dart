@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'screens/welcome_screen.dart';
+import 'screens/phone_auth_ui.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -10,16 +10,11 @@ void main() async {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Swiggy App',
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.deepOrange,
-      ),
-      home: const WelcomeScreen(),
+      home: PhoneAuthUI(),
     );
   }
 }

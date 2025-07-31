@@ -73,7 +73,13 @@ flutter:
     - assets/images/google.png
     - assets/images/facebook.png
     - assets/images/india.png
-  #   - images/a_dot_ham.jpeg
+    - assets/images/food.jpeg
+    - assets/images/instamart.png
+    - assets/images/dineout.jpeg
+    - assets/images/scenes.jpg
+    - assets/images/credit_card.jpeg
+    - assets/images/banner_slot.png
+  
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

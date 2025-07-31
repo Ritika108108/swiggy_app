@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'login_screen.dart';
+import 'package:swiggy_app/screens/phone_auth_ui.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -30,7 +30,7 @@ class WelcomeScreen extends StatelessWidget {
             ElevatedButton(
               onPressed: () => Navigator.push(
                 context,
-                MaterialPageRoute(builder: (_) => const PhoneAuthPage()),
+                MaterialPageRoute(builder: (_) => const PhoneAuthUI()),
               ),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.deepOrange,
