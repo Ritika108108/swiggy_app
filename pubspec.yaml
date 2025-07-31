@@ -90,7 +90,25 @@ flutter:
     - assets/images/food9.png
     - assets/images/food10.png
     - assets/images/train_meal.jpg
-    
+    - assets/images/restaurant1.jpeg
+    - assets/images/restaurant2.jpeg
+    - assets/images/restaurant3.jpeg
+    - assets/images/restaurant4.jpeg
+    - assets/images/restaurant5.jpeg
+    - assets/images/restaurant6.jpeg
+    - assets/images/restaurant7.jpeg
+    - assets/images/restaurant8.jpeg
+    - assets/images/shravan.jpeg
+    - assets/images/burger1.jpeg
+    - assets/images/pizza.jpeg
+    - assets/images/biryani.jpeg
+    - assets/images/chinese.jpeg
+    - assets/images/offer_zone.jpg
+    - assets/images/high_protein.jpeg
+    - assets/images/cakes.jpeg
+    - assets/images/paratha.jpeg
+    - assets/images/khichdi.jpeg
+    - assets/images/shake.jpeg
   
 
   # An image asset can refer to one or more resolution-specific "variants", see
