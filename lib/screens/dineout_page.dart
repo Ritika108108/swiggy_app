@@ -24,15 +24,11 @@ class DineoutPage extends StatelessWidget {
                         children: [
                           Text(
                             'Savitri Hostel',
-                            style: TextStyle(
-                                fontSize: 16, fontWeight: FontWeight.bold),
+                            style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                           ),
                           Text(
                             'Sinhagad Institute Of Technolo...',
-                            style: TextStyle(
-                              fontSize: 12,
-                              color: Colors.grey,
-                            ),
+                            style: TextStyle(fontSize: 12, color: Colors.grey),
                             overflow: TextOverflow.ellipsis,
                           ),
                         ],
@@ -86,17 +82,114 @@ class DineoutPage extends StatelessWidget {
                   physics: const NeverScrollableScrollPhysics(),
                   childAspectRatio: 0.8,
                   children: [
-                    gridItem("assets/images/cafe.jpg", "Cafes"),
-                    gridItem("assets/images/buffet.jpg", "Buffets"),
-                    gridItem("assets/images/rooftop.jpg", "Rooftop"),
-                    gridItem("assets/images/luxury.jpg", "Luxury"),
-                    gridItem("assets/images/pubs.jpg", "Pubs"),
-                    gridItem("assets/images/family.jpg", "Family"),
-                    gridItem("assets/images/pureveg.jpg", "Pure Veg"),
-                    gridItem("assets/images/newlyopened.jpg", "Newly Opened"),
+                    _buildGridItem("assets/images/cafe.jpg", "Cafes"),
+                    _buildGridItem("assets/images/buffet.jpg", "Buffets"),
+                    _buildGridItem("assets/images/rooftop.jpg", "Rooftop"),
+                    _buildGridItem("assets/images/luxury.jpg", "Luxury"),
+                    _buildGridItem("assets/images/pubs.jpg", "Pubs"),
+                    _buildGridItem("assets/images/family.jpg", "Family"),
+                    _buildGridItem("assets/images/pureveg.jpg", "Pure Veg"),
+                    _buildGridItem("assets/images/newlyopened.jpg", "Newly Opened"),
                   ],
                 ),
-              )
+              ),
+
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                child: Text(
+                  "Top 8 restaurants to explore",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+              ),
+
+              _buildRestaurantCard(
+                image: 'assets/images/restaurant_1.jpg',
+                name: 'Portico B4M',
+                location: 'Shivaji Nagar, 6.2 km',
+                cuisine: 'North Indian',
+                price: '₹1300 for two',
+                rating: 4.7,
+                offer1: 'Flat 20% off on pre-booking',
+                offer2: 'Get extra 10% off using TRYNEW',
+                moreOffers: 2,
+              ),
+              _buildRestaurantCard(
+                image: 'assets/images/restaurant_2.jpg',
+                name: "Aroma's Hyderabad Ho...",
+                location: 'Warje, 2.9 km',
+                cuisine: 'Chinese',
+                price: '₹1200 for two',
+                rating: 4.6,
+                offer1: 'Flat 10% off on walk-in',
+                offer2: 'Get extra 20% off using PayPal',
+                moreOffers: 1,
+              ),
+              _buildRestaurantCard(
+                image: 'assets/images/restaurant_2.jpg',
+                name: "Bhujbal Bhandhu",
+                location: 'Warje, 2.9 km',
+                cuisine: 'Chinese, North Indian',
+                price: '₹900 for two',
+                rating: 4.0,
+                offer1: 'Flat 20% off on walk-in',
+                offer2: 'Get extra 10% off using UPI',
+                moreOffers: 1,
+              ),
+              _buildRestaurantCard(
+                image: 'assets/images/restaurant_2.jpg',
+                name: "Cafe Hashtag",
+                location: 'Warje, 2.9 km',
+                cuisine: 'Italian',
+                price: '₹700 for two',
+                rating: 4.2,
+                offer1: 'Flat 10% off on walk-in',
+                offer2: 'Get extra 10% off using UPI',
+                moreOffers: 1,
+              ),
+              _buildRestaurantCard(
+                image: 'assets/images/restaurant_2.jpg',
+                name: "Laxmi Juice Bar",
+                location: 'Warje, 2.9 km',
+                cuisine: 'South Indian',
+                price: '₹1000 for two',
+                rating: 4.9,
+                offer1: 'Flat 10% off on walk-in',
+                offer2: 'Get extra 15% off using DINE150',
+                moreOffers: 1,
+              ),
+              _buildRestaurantCard(
+                image: 'assets/images/restaurant_2.jpg',
+                name: "Hakuna Matata",
+                location: 'Warje, 2.9 km',
+                cuisine: 'Maharashtrian',
+                price: '₹500 for two',
+                rating: 4.8,
+                offer1: 'Flat 15% off on walk-in',
+                offer2: 'Get extra 10% off using DINE150',
+                moreOffers: 1,
+              ),
+              _buildRestaurantCard(
+                image: 'assets/images/restaurant_2.jpg',
+                name: "Sky Kitchen",
+                location: 'Warje, 2.9 km',
+                cuisine: 'Korian',
+                price: '₹1500 for two',
+                rating: 4.7,
+                offer1: 'Flat 10% off on walk-in',
+                offer2: 'Get extra 10% off using DINE150',
+                moreOffers: 1,
+              ),
+              _buildRestaurantCard(
+                image: 'assets/images/restaurant_2.jpg',
+                name: "Spice Garden",
+                location: 'Warje, 2.9 km',
+                cuisine: 'Korian',
+                price: '₹2000 for two',
+                rating: 4.6,
+                offer1: 'Flat 20% off on walk-in',
+                offer2: 'Get extra 20% off using DINE150',
+                moreOffers: 1,
+              ),
             ],
           ),
         ),
@@ -104,29 +197,119 @@ class DineoutPage extends StatelessWidget {
     );
   }
 
-  Widget gridItem(String imgPath, String label) {
+  static Widget _buildGridItem(String image, String label) {
     return Column(
-      mainAxisSize: MainAxisSize.min,
       children: [
         Container(
-          width: 60,
           height: 60,
+          width: 60,
+          padding: const EdgeInsets.all(8),
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(30),
             color: Colors.grey.shade100,
-            image: DecorationImage(
-              image: AssetImage(imgPath),
-              fit: BoxFit.cover,
-            ),
+            borderRadius: BorderRadius.circular(12),
           ),
+          child: Image.asset(image, fit: BoxFit.contain),
         ),
-        const SizedBox(height: 6),
-        Text(
-          label,
-          style: const TextStyle(fontSize: 12),
-          textAlign: TextAlign.center,
-        ),
+        const SizedBox(height: 4),
+        Text(label, style: const TextStyle(fontSize: 12)),
       ],
+    );
+  }
+
+  static Widget _buildRestaurantCard({
+    required String image,
+    required String name,
+    required String location,
+    required String cuisine,
+    required String price,
+    required double rating,
+    required String offer1,
+    required String offer2,
+    required int moreOffers,
+  }) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      child: Container(
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(12),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black12,
+              blurRadius: 4,
+              offset: Offset(0, 2),
+            )
+          ],
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Stack(
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
+                  child: Image.asset(image, width: double.infinity, height: 160, fit: BoxFit.cover),
+                ),
+                Positioned(
+                  right: 8,
+                  top: 8,
+                  child: Icon(Icons.favorite_border, color: Colors.white),
+                )
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(name, style: TextStyle(fontWeight: FontWeight.bold)),
+                        Text(location, style: TextStyle(fontSize: 12, color: Colors.grey)),
+                        Text('$cuisine • $price', style: TextStyle(fontSize: 12)),
+                      ],
+                    ),
+                  ),
+                  Row(
+                    children: [
+                      const Icon(Icons.star, color: Colors.green, size: 16),
+                      const SizedBox(width: 4),
+                      Text(rating.toString(), style: const TextStyle(fontWeight: FontWeight.bold)),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Icon(Icons.local_fire_department, color: Colors.orange, size: 16),
+                      const SizedBox(width: 4),
+                      Expanded(child: Text(offer1, style: TextStyle(fontSize: 12))),
+                      Text("+$moreOffers offers", style: TextStyle(color: Colors.orange, fontSize: 12)),
+                    ],
+                  ),
+                  const SizedBox(height: 4),
+                  Row(
+                    children: [
+                      Icon(Icons.local_offer, color: Colors.red, size: 16),
+                      const SizedBox(width: 4),
+                      Expanded(child: Text(offer2, style: TextStyle(fontSize: 12))),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 8),
+          ],
+        ),
+      ),
     );
   }
 }
