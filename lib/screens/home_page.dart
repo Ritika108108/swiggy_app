@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'food_page.dart';
+import 'instamart_page.dart';
+import 'dineout_page.dart';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -13,12 +16,21 @@ class _HomePageState extends State<HomePage> {
 
   void _onItemTapped(int index) {
     if (index == 1) {
-      // Navigate to FoodPage when "Food" tab is tapped
       Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => const FoodPage()),
       );
-    }
+    } else if (index == 2) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => const InstamartPage()),
+      );
+    } else if (index == 3) {
+  Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => const DineoutPage()),
+  );
+}
     setState(() {
       _selectedIndex = index;
     });

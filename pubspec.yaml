@@ -109,6 +109,40 @@ flutter:
     - assets/images/paratha.jpeg
     - assets/images/khichdi.jpeg
     - assets/images/shake.jpeg
+    - assets/images/gemini.png
+    - assets/images/chocobake.png
+    - assets/images/kurkure.png
+    - assets/images/cashback.jpg
+    - assets/images/coriander.jpg
+    - assets/images/potato.jpg
+    - assets/images/amul_dahi.jpg
+    - assets/images/tomato.jpg
+    - assets/images/milk.jpg
+    - assets/images/bread.jpg
+    - assets/images/meat.jpg
+    - assets/images/sauce.jpg
+    - assets/images/tea.jpg
+    - assets/images/biscuits.jpg
+    - assets/images/dryfruits.jpg
+    - assets/images/masala.jpg
+    - assets/images/oil.jpg
+    - assets/images/atta.jpg
+    - assets/images/cereals.jpg
+    - assets/images/dairy.jpg
+    - assets/images/fresh_fruits.jpg
+    - assets/images/fresh_vegetables.jpg
+    - assets/images/dineout_spotlight.png
+    - assets/images/dineout_spotlight1.jpg
+    - assets/images/cafe.jpg
+    - assets/images/buffet.jpg
+    - assets/images/rooftop.jpg
+    - assets/images/luxury.jpg
+    - assets/images/buy_one.png
+    - assets/images/pubs.jpg
+    - assets/images/family.jpg
+    - assets/images/pureveg.jpg
+    - assets/images/newlyopened.jpg
+    
   
 
   # An image asset can refer to one or more resolution-specific "variants", see

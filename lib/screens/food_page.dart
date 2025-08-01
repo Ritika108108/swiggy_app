@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'home_page.dart';
 import '../widgets/food_card.dart';
 import '../widgets/search_bar.dart';
 import '../widgets/bottom_nav.dart';
@@ -200,7 +199,10 @@ class FoodPage extends StatelessWidget {
 
     final List<Map<String, String>> moreOptions = [
       {"label": "Offer Zone", "image": "assets/images/offer_zone.jpg"},
-      {"label": "High Protein\n30+ Grams", "image": "assets/images/high_protein.jpeg"},
+      {
+        "label": "High Protein\n30+ Grams",
+        "image": "assets/images/high_protein.jpeg",
+      },
       {"label": "Food on Train", "image": "assets/images/train_meal.jpg"},
     ];
 
@@ -212,7 +214,10 @@ class FoodPage extends StatelessWidget {
             children: [
               // Header
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16,
+                  vertical: 8,
+                ),
                 child: Row(
                   children: [
                     const Icon(Icons.home, color: Colors.deepOrange, size: 28),
@@ -221,10 +226,18 @@ class FoodPage extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('Home', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
-                          Text('Hingne Colony Home Near Kamat Clinic...',
-                              overflow: TextOverflow.ellipsis,
-                              style: TextStyle(fontSize: 13, color: Colors.grey)),
+                          Text(
+                            'Home',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                            ),
+                          ),
+                          Text(
+                            'Hingne Colony Home Near Kamat Clinic...',
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(fontSize: 13, color: Colors.grey),
+                          ),
                         ],
                       ),
                     ),
@@ -254,8 +267,14 @@ class FoodPage extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Text('Expires Today!',
-                              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.deepOrange)),
+                          const Text(
+                            'Expires Today!',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16,
+                              color: Colors.deepOrange,
+                            ),
+                          ),
                           const SizedBox(height: 4),
                           ElevatedButton(
                             style: ElevatedButton.styleFrom(
@@ -268,7 +287,12 @@ class FoodPage extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Image.asset("assets/images/banner_slot.png", width: 110, height: 50, fit: BoxFit.cover),
+                    Image.asset(
+                      "assets/images/banner_slot.png",
+                      width: 110,
+                      height: 50,
+                      fit: BoxFit.cover,
+                    ),
                   ],
                 ),
               ),
@@ -289,10 +313,17 @@ class FoodPage extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Text('Fresh Meals On Train!',
-                              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                          const Text(
+                            'Fresh Meals On Train!',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16,
+                            ),
+                          ),
                           const SizedBox(height: 4),
-                          const Text('Enjoy the widest variety of menu across 100+ stations.'),
+                          const Text(
+                            'Enjoy the widest variety of menu across 100+ stations.',
+                          ),
                           const SizedBox(height: 6),
                           ElevatedButton(
                             style: ElevatedButton.styleFrom(
@@ -305,7 +336,12 @@ class FoodPage extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Image.asset("assets/images/train_meal.jpg", width: 100, height: 100, fit: BoxFit.cover),
+                    Image.asset(
+                      "assets/images/train_meal.jpg",
+                      width: 100,
+                      height: 100,
+                      fit: BoxFit.cover,
+                    ),
                   ],
                 ),
               ),
@@ -319,27 +355,37 @@ class FoodPage extends StatelessWidget {
                   children: [
                     Expanded(
                       child: Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 8,
+                          vertical: 6,
+                        ),
                         decoration: BoxDecoration(
                           color: Colors.orange.shade100,
                           borderRadius: BorderRadius.circular(12),
                         ),
-                        child: const Text("MIN Rs. 100 OFF",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(fontWeight: FontWeight.bold)),
+                        child: const Text(
+                          "MIN Rs. 100 OFF",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
                       ),
                     ),
                     const SizedBox(width: 10),
                     Expanded(
                       child: Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 8,
+                          vertical: 6,
+                        ),
                         decoration: BoxDecoration(
                           color: Colors.grey.shade200,
                           borderRadius: BorderRadius.circular(12),
                         ),
-                        child: const Text("10 MINS DELIVERY",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(fontWeight: FontWeight.bold)),
+                        child: const Text(
+                          "10 MINS DELIVERY",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
                       ),
                     ),
                   ],
@@ -366,12 +412,18 @@ class FoodPage extends StatelessWidget {
                   },
                 ),
               ),
-               // 🆕 Category Row (e.g. Shravan, Burgers, etc.)
+              // 🆕 Category Row (e.g. Shravan, Burgers, etc.)
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16,
+                  vertical: 8,
+                ),
                 child: Align(
                   alignment: Alignment.centerLeft,
-                  child: const Text("What's on your mind?", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                  child: const Text(
+                    "What's on your mind?",
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  ),
                 ),
               ),
               SizedBox(
@@ -388,10 +440,18 @@ class FoodPage extends StatelessWidget {
                         children: [
                           ClipRRect(
                             borderRadius: BorderRadius.circular(50),
-                            child: Image.asset(item["image"]!, width: 50, height: 50, fit: BoxFit.cover),
+                            child: Image.asset(
+                              item["image"]!,
+                              width: 50,
+                              height: 50,
+                              fit: BoxFit.cover,
+                            ),
                           ),
                           const SizedBox(height: 6),
-                          Text(item["label"]!, style: const TextStyle(fontSize: 13)),
+                          Text(
+                            item["label"]!,
+                            style: const TextStyle(fontSize: 13),
+                          ),
                         ],
                       ),
                     );
@@ -401,10 +461,16 @@ class FoodPage extends StatelessWidget {
 
               // 🆕 More on Swiggy
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16,
+                  vertical: 8,
+                ),
                 child: Align(
                   alignment: Alignment.centerLeft,
-                  child: const Text("More on Swiggy", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                  child: const Text(
+                    "More on Swiggy",
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  ),
                 ),
               ),
               Padding(
@@ -419,10 +485,19 @@ class FoodPage extends StatelessWidget {
                           children: [
                             ClipRRect(
                               borderRadius: BorderRadius.circular(12),
-                              child: Image.asset(option["image"]!, width: 90, height: 70, fit: BoxFit.cover),
+                              child: Image.asset(
+                                option["image"]!,
+                                width: 90,
+                                height: 70,
+                                fit: BoxFit.cover,
+                              ),
                             ),
                             const SizedBox(height: 4),
-                            Text(option["label"]!, textAlign: TextAlign.center, style: const TextStyle(fontSize: 12)),
+                            Text(
+                              option["label"]!,
+                              textAlign: TextAlign.center,
+                              style: const TextStyle(fontSize: 12),
+                            ),
                           ],
                         ),
                       ),
@@ -440,7 +515,10 @@ class FoodPage extends StatelessWidget {
                   alignment: Alignment.centerLeft,
                   child: Text(
                     "Top ${restaurants.length} restaurants to explore",
-                    style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                    style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16,
+                    ),
                   ),
                 ),
               ),
@@ -470,7 +548,9 @@ class FoodPage extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         ClipRRect(
-                          borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
+                          borderRadius: const BorderRadius.vertical(
+                            top: Radius.circular(16),
+                          ),
                           child: Stack(
                             children: [
                               Image.asset(
@@ -483,14 +563,20 @@ class FoodPage extends StatelessWidget {
                                 left: 8,
                                 bottom: 8,
                                 child: Container(
-                                  padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 6,
+                                    vertical: 4,
+                                  ),
                                   decoration: BoxDecoration(
                                     color: Colors.orangeAccent,
                                     borderRadius: BorderRadius.circular(6),
                                   ),
                                   child: Text(
                                     res["offer"],
-                                    style: const TextStyle(color: Colors.white, fontSize: 12),
+                                    style: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 12,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -498,14 +584,20 @@ class FoodPage extends StatelessWidget {
                                 right: 8,
                                 bottom: 8,
                                 child: Container(
-                                  padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 6,
+                                    vertical: 4,
+                                  ),
                                   decoration: BoxDecoration(
                                     color: Colors.grey.shade800,
                                     borderRadius: BorderRadius.circular(6),
                                   ),
                                   child: Text(
                                     res["time"],
-                                    style: const TextStyle(color: Colors.white, fontSize: 12),
+                                    style: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 12,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -519,23 +611,36 @@ class FoodPage extends StatelessWidget {
                             children: [
                               Text(
                                 res["name"],
-                                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                                style: const TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16,
+                                ),
                               ),
                               const SizedBox(height: 4),
                               Row(
                                 children: [
-                                  const Icon(Icons.star, size: 16, color: Colors.green),
+                                  const Icon(
+                                    Icons.star,
+                                    size: 16,
+                                    color: Colors.green,
+                                  ),
                                   const SizedBox(width: 4),
                                   Text(
                                     "${res["rating"]} (${res["reviews"]}) • ${res["location"]}, ${res["distance"]}",
-                                    style: const TextStyle(fontSize: 13, color: Colors.grey),
+                                    style: const TextStyle(
+                                      fontSize: 13,
+                                      color: Colors.grey,
+                                    ),
                                   ),
                                 ],
                               ),
                               const SizedBox(height: 4),
                               Text(
                                 "${res["cuisine"]} • ${res["price"]}",
-                                style: const TextStyle(fontSize: 13, color: Colors.grey),
+                                style: const TextStyle(
+                                  fontSize: 13,
+                                  color: Colors.grey,
+                                ),
                               ),
                             ],
                           ),
