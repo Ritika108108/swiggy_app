@@ -125,7 +125,7 @@ class DineoutPage extends StatelessWidget {
                 moreOffers: 1,
               ),
               _buildRestaurantCard(
-                image: 'assets/images/restaurant_2.jpg',
+                image: 'assets/images/restaurant_3.jpg',
                 name: "Bhujbal Bhandhu",
                 location: 'Warje, 2.9 km',
                 cuisine: 'Chinese, North Indian',
@@ -136,7 +136,7 @@ class DineoutPage extends StatelessWidget {
                 moreOffers: 1,
               ),
               _buildRestaurantCard(
-                image: 'assets/images/restaurant_2.jpg',
+                image: 'assets/images/restaurant_4.jpg',
                 name: "Cafe Hashtag",
                 location: 'Warje, 2.9 km',
                 cuisine: 'Italian',
@@ -147,7 +147,7 @@ class DineoutPage extends StatelessWidget {
                 moreOffers: 1,
               ),
               _buildRestaurantCard(
-                image: 'assets/images/restaurant_2.jpg',
+                image: 'assets/images/restaurant_5.jpg',
                 name: "Laxmi Juice Bar",
                 location: 'Warje, 2.9 km',
                 cuisine: 'South Indian',
@@ -158,7 +158,7 @@ class DineoutPage extends StatelessWidget {
                 moreOffers: 1,
               ),
               _buildRestaurantCard(
-                image: 'assets/images/restaurant_2.jpg',
+                image: 'assets/images/restaurant_6.jpg',
                 name: "Hakuna Matata",
                 location: 'Warje, 2.9 km',
                 cuisine: 'Maharashtrian',
@@ -169,7 +169,7 @@ class DineoutPage extends StatelessWidget {
                 moreOffers: 1,
               ),
               _buildRestaurantCard(
-                image: 'assets/images/restaurant_2.jpg',
+                image: 'assets/images/restaurant_7.jpg',
                 name: "Sky Kitchen",
                 location: 'Warje, 2.9 km',
                 cuisine: 'Korian',
@@ -180,10 +180,10 @@ class DineoutPage extends StatelessWidget {
                 moreOffers: 1,
               ),
               _buildRestaurantCard(
-                image: 'assets/images/restaurant_2.jpg',
+                image: 'assets/images/restaurant_8.jpg',
                 name: "Spice Garden",
                 location: 'Warje, 2.9 km',
-                cuisine: 'Korian',
+                cuisine: 'Japneese',
                 price: '₹2000 for two',
                 rating: 4.6,
                 offer1: 'Flat 20% off on walk-in',

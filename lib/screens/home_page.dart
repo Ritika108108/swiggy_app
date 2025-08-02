@@ -265,7 +265,7 @@ class _HomePageState extends State<HomePage> {
             icon: Icon(Icons.restaurant_menu),
             label: "Dineout",
           ),
-          BottomNavigationBarItem(icon: Icon(Icons.replay), label: "Reorder"),
+          
         ],
       ),
     );
